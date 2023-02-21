@@ -1,7 +1,5 @@
 #Daniel Rodrgiues Martins 19.1.8147
-#George, estava tentando fazer do jeito que voce faz em sala criando o main, graph mas nao tava conseguindo
-#importar as funcoes de ler arquivos de percorrer o labirinto na main ai vim uns videos e criei minha main junto
-#com as funcoes mesmo
+
 from collections import deque
 import time
 
@@ -24,7 +22,7 @@ def solve_lab(lab, start, end):
                 parent[(new_row, new_col)] = (row, col)
     return None
 
-def build_path(parent, start, end):
+def build(parent, start, end):
     path = []
     node = end
     while node != start:
@@ -56,7 +54,7 @@ def main():
         parent = solve_lab(lab, start, end)
         end_time = time.perf_counter()
         if parent:
-            path = build_path(parent, start, end)
+            path = build(parent, start, end)
             print("Caminho de S a E:")
             for node in path:
                 print(node)
