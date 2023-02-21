@@ -3,7 +3,6 @@
 from collections import deque
 import time
 
-
 def solve_lab(lab, start, end): 
     rows, cols = len(lab), len(lab[0])
     visited = [[False for _ in range(cols)] for _ in range(rows)]
