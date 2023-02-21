@@ -46,7 +46,7 @@ def load_lab(filename):
 
 def main():
     while True:
-        filename = input("Informe o nome do arquivo de entrada (ou 0 para encerrar): ")
+        filename = input("Digite o nome do arquivo de entrada e caso queira encerrar digite 0: ")
         if filename == "0":
             break
         lab, start, end = load_lab(filename)
@@ -55,7 +55,7 @@ def main():
         end_time = time.perf_counter()
         if parent:
             path = build(parent, start, end)
-            print("Caminho de S a E:")
+            print("Caminho:")
             for node in path:
                 print(node)
             print(f"Tempo de execução: {end_time - start_time:.4f} segundos.")
